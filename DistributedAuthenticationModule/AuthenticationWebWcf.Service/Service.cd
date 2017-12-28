@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="AuthenticationWebWcf.Service.Extensions.FixedTokenEndpointBehaviorExtension" Collapsed="true">
+    <Position X="0.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQIAAAAAAAAAAAAAAAAEAAAIAAAAAAAAAABAAA=</HashCode>
+      <FileName>Extensions\FixedTokenEndpointBehaviorExtension.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AuthenticationWebWcf.Service.Extensions.ServiceTokenEndpointBehaviorExtension" Collapsed="true">
+    <Position X="0.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQIAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Extensions\ServiceTokenEndpointBehaviorExtension.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AuthenticationWebWcf.Service.Extensions.TokenElement" Collapsed="true">
+    <Position X="0.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQICAAAAAAAAAAAQAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Extensions\TokenElement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AuthenticationWebWcf.Service.Extensions.WebTokenEndpointBehaviorExtension" Collapsed="true">
+    <Position X="0.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQIAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Extensions\WebTokenEndpointBehaviorExtension.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AuthenticationWebWcf.Service.Behaviors.TokenEndpointBehavior&lt;TInspector&gt;" Collapsed="true">
+    <Position X="2.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAACAAQAACAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Behaviors\TokenEndpointBehavior.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="AuthenticationWebWcf.Service.Behaviors.TokenValidationServiceBehaviorAttribute" Collapsed="true">
+    <Position X="2.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAACAAAgCAAAAQAAAAAQAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Behaviors\TokenValidationServiceBehaviorAttribute.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="AuthenticationWebWcf.Service.Inspectors.FixedTokenClientMessageInspector" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAIAAAABAIAAAAAAAAAAAA=</HashCode>
+      <FileName>Inspectors\FixedTokenClientMessageInspector.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="AuthenticationWebWcf.Service.Inspectors.ServiceTokenClientMessageInspector" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAIgAAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>Inspectors\ServiceTokenClientMessageInspector.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="AuthenticationWebWcf.Service.Inspectors.TokenDispatchMessageInspector&lt;T&gt;" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AARAEAAAAEAAAAAAAAAAAAAAAIAAAAAAAAAEAAAgAAA=</HashCode>
+      <FileName>Inspectors\TokenDispatchMessageInspector.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="AuthenticationWebWcf.Service.Inspectors.WebTokenClientMessageInspector" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAIAAAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>Inspectors\WebTokenClientMessageInspector.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="AuthenticationWebWcf.Service.Helpers.HttpContextUserAuthentication" Collapsed="true">
+    <Position X="5.75" Y="4.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>Helpers\HttpContextUserAuthentication.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AuthenticationWebWcf.Service.ContextExtensions.AuthenticationDataExtension" Collapsed="true">
+    <Position X="5.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAIAAAAAQAAAAIAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>ContextExtensions\AuthenticationDataExtension.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="AuthenticationWebWcf.Service.ContextExtensions.AuthenticationDataExtensionReader&lt;T&gt;" Collapsed="true">
+    <Position X="0.5" Y="6.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgCAAAAAAAAAgAAAAQCAUAAAAAAAAAA=</HashCode>
+      <FileName>ContextExtensions\AuthenticationDataExtensionReader.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="AuthenticationWebWcf.Service.ContextExtensions.TokenDataExtensionReader" Collapsed="true">
+    <Position X="5.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ContextExtensions\TokenDataExtensionReader.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="AuthenticationWebWcf.Service.Behaviors.TokenValidatorOperationBehaviorAttribute" Collapsed="true">
+    <Position X="0.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAQIACAAAgAAAAAAAAAAAAAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>Behaviors\TokenValidatorOperationBehaviorAttribute.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="AuthenticationWebWcf.Common.Interfaces.FixedToken" Collapsed="true">
+    <Position X="5.75" Y="2.25" Width="2.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

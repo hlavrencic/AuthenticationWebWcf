@@ -3,18 +3,53 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DistributedAuthenticationModule", "DistributedAuthenticationModule\DistributedAuthenticationModule.csproj", "{A9197D83-3788-4C1C-91BE-C6DC0B702C7E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthenticationWebWcf.Common", "AuthenticationWebWcf.Common\AuthenticationWebWcf.Common.csproj", "{3AB7006A-CF2B-4CFA-A714-418507E92400}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthenticationWebWcf.Common.Tests", "AuthenticationWebWcf.Common.Tests\AuthenticationWebWcf.Common.Tests.csproj", "{974268AE-1FEB-4D5D-AA50-AC72E3A0C901}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthenticationWebWcf.Service", "AuthenticationWebWcf.Service\AuthenticationWebWcf.Service.csproj", "{0BD0114C-6FA6-43A2-A280-D6C4360A9D6F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthenticationWebWcf.Service.Tests", "AuthenticationWebWcf.Service.Tests\AuthenticationWebWcf.Service.Tests.csproj", "{4FE8B618-7581-49E8-A414-031E8B722260}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthenticationWebWcf.Web", "AuthenticationWebWcf.Web\AuthenticationWebWcf.Web.csproj", "{522FB8A5-639D-4319-8517-1993A96A6B0A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Jenkins|Any CPU = Jenkins|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{A9197D83-3788-4C1C-91BE-C6DC0B702C7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A9197D83-3788-4C1C-91BE-C6DC0B702C7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A9197D83-3788-4C1C-91BE-C6DC0B702C7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A9197D83-3788-4C1C-91BE-C6DC0B702C7E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AB7006A-CF2B-4CFA-A714-418507E92400}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AB7006A-CF2B-4CFA-A714-418507E92400}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AB7006A-CF2B-4CFA-A714-418507E92400}.Jenkins|Any CPU.ActiveCfg = Jenkins|Any CPU
+		{3AB7006A-CF2B-4CFA-A714-418507E92400}.Jenkins|Any CPU.Build.0 = Jenkins|Any CPU
+		{3AB7006A-CF2B-4CFA-A714-418507E92400}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AB7006A-CF2B-4CFA-A714-418507E92400}.Release|Any CPU.Build.0 = Release|Any CPU
+		{974268AE-1FEB-4D5D-AA50-AC72E3A0C901}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{974268AE-1FEB-4D5D-AA50-AC72E3A0C901}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{974268AE-1FEB-4D5D-AA50-AC72E3A0C901}.Jenkins|Any CPU.ActiveCfg = Jenkins|Any CPU
+		{974268AE-1FEB-4D5D-AA50-AC72E3A0C901}.Jenkins|Any CPU.Build.0 = Jenkins|Any CPU
+		{974268AE-1FEB-4D5D-AA50-AC72E3A0C901}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{974268AE-1FEB-4D5D-AA50-AC72E3A0C901}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0BD0114C-6FA6-43A2-A280-D6C4360A9D6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BD0114C-6FA6-43A2-A280-D6C4360A9D6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BD0114C-6FA6-43A2-A280-D6C4360A9D6F}.Jenkins|Any CPU.ActiveCfg = Jenkins|Any CPU
+		{0BD0114C-6FA6-43A2-A280-D6C4360A9D6F}.Jenkins|Any CPU.Build.0 = Jenkins|Any CPU
+		{0BD0114C-6FA6-43A2-A280-D6C4360A9D6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BD0114C-6FA6-43A2-A280-D6C4360A9D6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FE8B618-7581-49E8-A414-031E8B722260}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FE8B618-7581-49E8-A414-031E8B722260}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FE8B618-7581-49E8-A414-031E8B722260}.Jenkins|Any CPU.ActiveCfg = Jenkins|Any CPU
+		{4FE8B618-7581-49E8-A414-031E8B722260}.Jenkins|Any CPU.Build.0 = Jenkins|Any CPU
+		{4FE8B618-7581-49E8-A414-031E8B722260}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FE8B618-7581-49E8-A414-031E8B722260}.Release|Any CPU.Build.0 = Release|Any CPU
+		{522FB8A5-639D-4319-8517-1993A96A6B0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{522FB8A5-639D-4319-8517-1993A96A6B0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{522FB8A5-639D-4319-8517-1993A96A6B0A}.Jenkins|Any CPU.ActiveCfg = Jenkins|Any CPU
+		{522FB8A5-639D-4319-8517-1993A96A6B0A}.Jenkins|Any CPU.Build.0 = Jenkins|Any CPU
+		{522FB8A5-639D-4319-8517-1993A96A6B0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{522FB8A5-639D-4319-8517-1993A96A6B0A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

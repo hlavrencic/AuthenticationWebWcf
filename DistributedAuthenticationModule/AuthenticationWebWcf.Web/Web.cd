@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="AuthenticationWebWcf.Web.WebAuthFactory" Collapsed="true">
+    <Position X="0.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAQAAAAIAAAAQAAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>WebAuthFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AuthenticationWebWcf.Web.Mvc.GlobalAuthenticationActionFilterAttribute" Collapsed="true">
+    <Position X="2.25" Y="2.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAAACAAAABAAAAAAAAAEAAAQAAAAAAAA=</HashCode>
+      <FileName>Mvc\GlobalAuthenticationActionFilterAttribute.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="AuthenticationWebWcf.Web.Business.PrincipalManagerFromToken" Collapsed="true">
+    <Position X="4.5" Y="2.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAAAAgAAAAAAEAAQAAAAAAAAAAAA=</HashCode>
+      <FileName>Business\PrincipalManagerFromToken.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="AuthenticationWebWcf.Web.Business.AuthenticatedUserManager" Collapsed="true">
+    <Position X="6.75" Y="2.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAAAAAAEIAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Business\AuthenticatedUserManager.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="AuthenticationWebWcf.Web.Business.AuthenticatedUserReader" Collapsed="true">
+    <Position X="9" Y="1.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAEAAAAAAAAAA=</HashCode>
+      <FileName>Business\AuthenticatedUserReader.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="AuthenticationWebWcf.Web.Business.TokenCookieManager" Collapsed="true">
+    <Position X="9" Y="2.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAAAAAAgAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Business\TokenCookieManager.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="AuthenticationWebWcf.Service.Helpers.HttpContextUserAuthentication" Collapsed="true">
+    <Position X="9" Y="3" Width="2" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier />
+  </Class>
+  <Interface Name="AuthenticationWebWcf.Web.Business.ITokenCookieManager" Collapsed="true">
+    <Position X="2.25" Y="3.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAAAAAAgAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Business\ITokenCookieManager.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="AuthenticationWebWcf.Common.Interfaces.IAutenticationConverter" Collapsed="true">
+    <Position X="11.25" Y="1.5" Width="2" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="AuthenticationWebWcf.Web.Business.IAuthenticatedUserReader" Collapsed="true">
+    <Position X="2.25" Y="4.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAA=</HashCode>
+      <FileName>Business\IAuthenticatedUserReader.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>
