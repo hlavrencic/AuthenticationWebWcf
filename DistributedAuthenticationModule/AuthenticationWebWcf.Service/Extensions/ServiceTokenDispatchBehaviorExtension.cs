@@ -7,13 +7,13 @@ using AuthenticationWebWcf.Service.Providers;
 
 namespace AuthenticationWebWcf.Service.Extensions
 {
-    public class TokenElement : BehaviorExtensionElement
+    public class ServiceTokenDispatchBehaviorExtension : BehaviorExtensionElement
     {
         private const string TokenKeyConfigName = "Key";
 
         private readonly IProvider provider;
 
-        public TokenElement()
+        public ServiceTokenDispatchBehaviorExtension()
         {
             ServiceProviderInitializer.Intialize();
             provider = BehaviorServiceProvider.Current();
@@ -23,7 +23,7 @@ namespace AuthenticationWebWcf.Service.Extensions
         /// For testing
         /// </summary>
         /// <param name="provider">Mock provider</param>
-        public TokenElement(IProvider provider)
+        public ServiceTokenDispatchBehaviorExtension(IProvider provider)
         {
             this.provider = provider;
         }

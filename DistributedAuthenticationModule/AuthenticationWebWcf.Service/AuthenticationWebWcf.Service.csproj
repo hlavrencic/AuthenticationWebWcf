@@ -78,7 +78,7 @@
     <Compile Include="DataContracts\UnauthorizedAccessFault.cs" />
     <Compile Include="Extensions\FixedTokenEndpointBehaviorExtension.cs" />
     <Compile Include="Extensions\WebTokenEndpointBehaviorExtension.cs" />
-    <Compile Include="Extensions\TokenElement.cs" />
+    <Compile Include="Extensions\ServiceTokenDispatchBehaviorExtension.cs" />
     <Compile Include="Extensions\ServiceTokenEndpointBehaviorExtension.cs" />
     <Compile Include="Helpers\HttpContextUserAuthentication.cs" />
     <Compile Include="Helpers\ServiceSecurityMessageHeader.cs" />

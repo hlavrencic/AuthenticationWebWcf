@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthenticationWebWcf.Servic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthenticationWebWcf.Web", "AuthenticationWebWcf.Web\AuthenticationWebWcf.Web.csproj", "{522FB8A5-639D-4319-8517-1993A96A6B0A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthenticationWebWcf.UsageExample", "AuthenticationWebWcf.UsageExample\AuthenticationWebWcf.UsageExample.csproj", "{E1F7212F-8D8F-477A-A984-EE2E4559DF63}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -50,6 +52,12 @@ Global
 		{522FB8A5-639D-4319-8517-1993A96A6B0A}.Jenkins|Any CPU.Build.0 = Jenkins|Any CPU
 		{522FB8A5-639D-4319-8517-1993A96A6B0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{522FB8A5-639D-4319-8517-1993A96A6B0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1F7212F-8D8F-477A-A984-EE2E4559DF63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1F7212F-8D8F-477A-A984-EE2E4559DF63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1F7212F-8D8F-477A-A984-EE2E4559DF63}.Jenkins|Any CPU.ActiveCfg = Release|Any CPU
+		{E1F7212F-8D8F-477A-A984-EE2E4559DF63}.Jenkins|Any CPU.Build.0 = Release|Any CPU
+		{E1F7212F-8D8F-477A-A984-EE2E4559DF63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1F7212F-8D8F-477A-A984-EE2E4559DF63}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
