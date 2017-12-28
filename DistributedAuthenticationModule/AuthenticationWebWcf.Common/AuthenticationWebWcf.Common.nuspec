@@ -20,5 +20,6 @@
 		<releaseNotes>Initial release.</releaseNotes>
 		<copyright>Copyright 2017</copyright>
 		<tags>json web token authentication wcf web</tags>
+    <projectUrl>https://github.com/hlavrencic/AutoDependencyMocking</projectUrl>
 	</metadata>
 </package>
