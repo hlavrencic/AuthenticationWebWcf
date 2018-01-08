@@ -70,6 +70,9 @@
     <Compile Include="Biz\IActionValidation.cs" />
     <Compile Include="Biz\IServiceAuthentication.cs" />
     <Compile Include="Biz\ServiceAuthentication.cs" />
+    <Compile Include="Config\ReBindElement.cs" />
+    <Compile Include="Config\ReBindElementCollection.cs" />
+    <Compile Include="Config\WcfAuthenticationSection.cs" />
     <Compile Include="ContextExtensions\AuthenticationDataExtension.cs" />
     <Compile Include="ContextExtensions\AuthenticationDataExtensionReader.cs" />
     <Compile Include="ContextExtensions\IAuthenticationDataExtension.cs" />
@@ -99,10 +102,6 @@
     <ProjectReference Include="..\AuthenticationWebWcf.Common\AuthenticationWebWcf.Common.csproj">
       <Project>{3AB7006A-CF2B-4CFA-A714-418507E92400}</Project>
       <Name>AuthenticationWebWcf.Common</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\LaNacion.SEOP.Common.Injection\LaNacion.SEOP.Common.Injection.csproj">
-      <Project>{83355F10-625C-4B8B-9314-B5EB8A9A0F5D}</Project>
-      <Name>LaNacion.SEOP.Common.Injection</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

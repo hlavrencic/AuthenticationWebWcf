@@ -1,4 +1,5 @@
-﻿using AuthenticationWebWcf.Common.DataContracts;
+﻿using System;
+using AuthenticationWebWcf.Common.DataContracts;
 using AuthenticationWebWcf.Common.Providers;
 using AuthenticationWebWcf.Service.ContextExtensions;
 
@@ -6,11 +7,10 @@ namespace AuthenticationWebWcf.Service.Providers
 {
     public class AuthenticationDataExtensionReaderProvider
     {
-        private readonly IProvider provider;
+        private IProvider provider;
 
         public AuthenticationDataExtensionReaderProvider()
         {
-            provider = ServiceProviderInitializer.Intialize();
         }
 
         internal AuthenticationDataExtensionReaderProvider(IProvider provider)
@@ -20,7 +20,23 @@ namespace AuthenticationWebWcf.Service.Providers
 
         public IAuthenticationDataExtensionReader<T> CreateAuthenticationDataExtensionReader<T>() where T : AuthenticatedDto
         {
+            if (provider == null)
+            {
+                provider = ServiceProviderInitializer.Intialize();
+            }
+            
             return provider.Get<IAuthenticationDataExtensionReader<T>>();
+        }
+        
+        public void RebindTo<TInterface,TImplementation>()
+            where TImplementation : TInterface
+        {
+            if (provider == null)
+            {
+                provider = ServiceProviderInitializer.Intialize();
+            }
+
+            provider.ReBindTo<TInterface,TImplementation>();
         }
     }
 }

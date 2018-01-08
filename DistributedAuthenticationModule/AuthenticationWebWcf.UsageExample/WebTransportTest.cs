@@ -7,14 +7,13 @@ using TestingTools.WcfSelfHost;
 namespace AuthenticationWebWcf.UsageExample
 {
     [TestClass]
-    public class WebServiceExampleTest
+    public class WebTransportTest
     {
         private SelfHostWcf host;
 
         private WcfClient client;
 
-        private IService1 service;
-
+        private IService2 service2;
         private Mock<ILog> logMock;
 
         [TestInitialize]
@@ -24,12 +23,15 @@ namespace AuthenticationWebWcf.UsageExample
 
             client = new WcfClient();
 
-            var provider = new ServiceProvider(logMock.Object, client);
+            var provider = new ServiceProvider(logMock.Object, new WcfClient());
             host = new SelfHostWcf(provider);
-            
             host.Init<IService1>();
+
+            host = new SelfHostWcf(provider);
+            host.Init<IService2>();
+
             
-            service = client.CreateClient<IService1>("IService1Fixed");
+            service2 = client.CreateClient<IService2>("IService2");
         }
 
         [TestCleanup]
@@ -42,22 +44,12 @@ namespace AuthenticationWebWcf.UsageExample
         [TestMethod]
         public void TestMethod1()
         {
-            //var guid = new Guid();
-            //var securedDataSent = new SecuredData()
-            //{
-            //    Client = "Client1",
-            //    FechaExpiracion = new DateTime(2017,1,1),
-            //    Guid = guid.ToString(),
-            //    Nombre = "Name1",
-            //    Permisos = new []{ "Role1" , "Role2" }
-            //};
-
             SecuredData securedDataParsed = null;
             logMock.Setup(s => s.Log(It.IsAny<SecuredData>())).Callback<SecuredData>(c => securedDataParsed = c);
 
-            service.Method1();
+            service2.CallWebService();
 
-            
+
 
             Assert.AreEqual("00000000-0000-0000-0000-000000000000", securedDataParsed.Guid);
             Assert.AreEqual("Client1", securedDataParsed.Client);
@@ -67,6 +59,5 @@ namespace AuthenticationWebWcf.UsageExample
             Assert.AreEqual("Role1", securedDataParsed.Permisos[0]);
             Assert.AreEqual("Role2", securedDataParsed.Permisos[1]);
         }
-        
     }
 }

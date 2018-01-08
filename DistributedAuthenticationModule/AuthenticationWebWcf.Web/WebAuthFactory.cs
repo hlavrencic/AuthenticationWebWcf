@@ -18,7 +18,6 @@ namespace AuthenticationWebWcf.Web
 
         public WebAuthFactory()
         {
-            provider = BehaviorServiceProvider.Current();
             if (provider != null)
             {
                 return;
@@ -27,9 +26,7 @@ namespace AuthenticationWebWcf.Web
             var kernel = new StandardKernel();
             kernel.Load<CommonAuthModule>();
             kernel.Load<WebAuthenticationModule>();
-            BehaviorServiceProvider.Register(kernel);
-
-            provider = BehaviorServiceProvider.Current();
+            provider = BehaviorServiceProvider.Create(kernel);
         }
 
         public GlobalAuthenticationActionFilterAttribute CreateGlobalAuthenticationActionFilterAttribute()

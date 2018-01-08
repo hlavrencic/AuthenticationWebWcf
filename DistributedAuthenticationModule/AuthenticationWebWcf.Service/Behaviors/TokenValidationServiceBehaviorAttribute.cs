@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.ServiceModel;
@@ -14,12 +15,12 @@ namespace AuthenticationWebWcf.Service.Behaviors
     public class TokenValidationServiceBehaviorAttribute : Attribute, IServiceBehavior
     {
         private readonly ITokenDispatchMessageInspector tokenDispatchMessageInspector;
-        private readonly ILogger logger;
+        private readonly IEnumerable<ILogger> loggers;
 
-        public TokenValidationServiceBehaviorAttribute(ITokenDispatchMessageInspector tokenDispatchMessageInspector, ILogger logger)
+        public TokenValidationServiceBehaviorAttribute(ITokenDispatchMessageInspector tokenDispatchMessageInspector, IEnumerable<ILogger> loggers)
         {
             this.tokenDispatchMessageInspector = tokenDispatchMessageInspector;
-            this.logger = logger;
+            this.loggers = loggers;
         }
 
         public string TokenKey { get; set; }
@@ -47,7 +48,10 @@ namespace AuthenticationWebWcf.Service.Behaviors
                     }
 
                     var msg = string.Format("{0} requires a FaultContractAttribute(typeof({1})) in each operation contract. The \"{2}\" operation contains no FaultContractAttribute.", GetType().FullName, type.FullName, opDesc.Name);
-                    logger.Warn(msg);
+                    foreach (var logger in loggers)
+                    {
+                        logger.Warn(msg);
+                    }
                 }
             }
         }

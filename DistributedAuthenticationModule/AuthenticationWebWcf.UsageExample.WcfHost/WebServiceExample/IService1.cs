@@ -1,11 +1,11 @@
 ﻿using System.ServiceModel;
 
-namespace AuthenticationWebWcf.UsageExample.WebServiceExample
+namespace AuthenticationWebWcf.UsageExample.WcfHost.WebServiceExample
 {
     [ServiceContract]
     public interface IService1
     {
         [OperationContract]
-        void Method1();
+        SecuredData Method1();
     }
 }
