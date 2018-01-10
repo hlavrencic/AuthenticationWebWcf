@@ -69,6 +69,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AutenticationConverter.cs" />
+    <Compile Include="AutenticationConverterPropKey.cs" />
     <Compile Include="Crypto\IJsonWebToken.cs" />
     <Compile Include="Crypto\IJsonWebTokenSetKey.cs" />
     <Compile Include="Crypto\JsonWebToken.cs" />
@@ -79,6 +80,7 @@
     <Compile Include="Exceptions\ExpiredException.cs" />
     <Compile Include="Exceptions\SerializationException.cs" />
     <Compile Include="Exceptions\SignatureVerificationException.cs" />
+    <Compile Include="Interfaces\IAutenticationConverterWithAppKey.cs" />
     <Compile Include="Interfaces\IAutenticationConverter.cs" />
     <Compile Include="Interfaces\FixedToken.cs" />
     <Compile Include="Interfaces\IFixedToken.cs" />

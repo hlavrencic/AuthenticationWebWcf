@@ -1,6 +1,6 @@
 ﻿using AuthenticationWebWcf.Common.DataContracts;
 
-namespace AuthenticationWebWcf.Web.Business
+namespace AuthenticationWebWcf.Common.Interfaces
 {
     public interface IAutenticationConverterWithAppKey
     {

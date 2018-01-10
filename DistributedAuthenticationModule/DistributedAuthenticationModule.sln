@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthenticationWebWcf.Web", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthenticationWebWcf.UsageExample", "AuthenticationWebWcf.UsageExample\AuthenticationWebWcf.UsageExample.csproj", "{E1F7212F-8D8F-477A-A984-EE2E4559DF63}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthenticationWebWcf.WebUsageExample", "AuthenticationWebWcf.WebUsageExample\AuthenticationWebWcf.WebUsageExample.csproj", "{2EAA51AD-692C-454B-927B-167BEF30F9E5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -58,6 +60,12 @@ Global
 		{E1F7212F-8D8F-477A-A984-EE2E4559DF63}.Jenkins|Any CPU.Build.0 = Release|Any CPU
 		{E1F7212F-8D8F-477A-A984-EE2E4559DF63}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E1F7212F-8D8F-477A-A984-EE2E4559DF63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2EAA51AD-692C-454B-927B-167BEF30F9E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EAA51AD-692C-454B-927B-167BEF30F9E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EAA51AD-692C-454B-927B-167BEF30F9E5}.Jenkins|Any CPU.ActiveCfg = Release|Any CPU
+		{2EAA51AD-692C-454B-927B-167BEF30F9E5}.Jenkins|Any CPU.Build.0 = Release|Any CPU
+		{2EAA51AD-692C-454B-927B-167BEF30F9E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EAA51AD-692C-454B-927B-167BEF30F9E5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

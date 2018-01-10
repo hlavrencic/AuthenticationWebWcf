@@ -1,4 +1,5 @@
 ﻿using AuthenticationWebWcf.Common.DataContracts;
+using AuthenticationWebWcf.Common.Interfaces;
 using AuthenticationWebWcf.Common.Providers;
 using AuthenticationWebWcf.Web.Business;
 using AuthenticationWebWcf.Web.Injection;

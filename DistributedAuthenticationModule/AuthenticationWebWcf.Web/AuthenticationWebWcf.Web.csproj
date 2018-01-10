@@ -67,7 +67,6 @@
     <Compile Include="Business\AutenticationConverterWithAppKey.cs" />
     <Compile Include="Business\AuthenticatedUserReader.cs" />
     <Compile Include="Business\AuthenticatedUserManager.cs" />
-    <Compile Include="Business\IAutenticationConverterWithAppKey.cs" />
     <Compile Include="Business\IAuthenticatedUserManager.cs" />
     <Compile Include="Business\IAuthenticatedUserReader.cs" />
     <Compile Include="Business\IJsonWebTokenKeyConfig.cs" />
