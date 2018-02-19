@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using AuthenticationWebWcf.Common.DataContracts;
 using AuthenticationWebWcf.Common.Interfaces;
-using AuthenticationWebWcf.Service.Helpers;
+using AuthenticationWebWcf.Web.Helpers;
 
 namespace AuthenticationWebWcf.Web.Business
 {

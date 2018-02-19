@@ -2,8 +2,8 @@
 using System.ServiceModel;
 using System.ServiceModel.Channels;
 using System.Web;
-using AuthenticationWebWcf.Service.Helpers;
-using AuthenticationWebWcf.Service.Inspectors;
+using AuthenticationWebWcf.Web.Helpers;
+using AuthenticationWebWcf.WebWcfClient.Inspectors;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 

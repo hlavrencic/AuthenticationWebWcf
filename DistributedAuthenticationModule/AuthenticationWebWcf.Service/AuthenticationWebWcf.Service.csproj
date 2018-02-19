@@ -37,15 +37,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Jenkins|AnyCPU'">
-    <DebugSymbols>true</DebugSymbols>
-    <OutputPath>bin\Jenkins\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <DebugType>full</DebugType>
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <ErrorReport>prompt</ErrorReport>
-    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Ninject, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
       <HintPath>..\packages\Ninject.3.2.0.0\lib\net45-full\Ninject.dll</HintPath>
@@ -60,7 +51,6 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
-    <Reference Include="System.Web" />
     <Reference Include="System.XML" />
   </ItemGroup>
   <ItemGroup>
@@ -82,17 +72,12 @@
     <Compile Include="ContextExtensions\TokenDataExtensionReader.cs" />
     <Compile Include="DataContracts\UnauthorizedAccessFault.cs" />
     <Compile Include="Extensions\FixedTokenEndpointBehaviorExtension.cs" />
-    <Compile Include="Extensions\WebTokenEndpointBehaviorExtension.cs" />
     <Compile Include="Extensions\ServiceTokenDispatchBehaviorExtension.cs" />
     <Compile Include="Extensions\ServiceTokenEndpointBehaviorExtension.cs" />
-    <Compile Include="Helpers\HttpContextUserAuthentication.cs" />
     <Compile Include="Helpers\ServiceSecurityMessageHeader.cs" />
     <Compile Include="Inspectors\FixedTokenClientMessageInspector.cs" />
-    <Compile Include="Inspectors\ITokenClientMessageInspector.cs" />
-    <Compile Include="Inspectors\ITokenDispatchMessageInspector.cs" />
     <Compile Include="Inspectors\ServiceTokenClientMessageInspector.cs" />
     <Compile Include="Inspectors\TokenDispatchMessageInspector.cs" />
-    <Compile Include="Inspectors\WebTokenClientMessageInspector.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\AuthenticationDataExtensionReaderProvider.cs" />
     <Compile Include="Providers\ServiceProviderInitializer.cs" />
@@ -102,6 +87,10 @@
     <ProjectReference Include="..\AuthenticationWebWcf.Common\AuthenticationWebWcf.Common.csproj">
       <Project>{3AB7006A-CF2B-4CFA-A714-418507E92400}</Project>
       <Name>AuthenticationWebWcf.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AuthenticationWebWcf.IService\AuthenticationWebWcf.IService.csproj">
+      <Project>{B6214C88-C2D1-49A0-B80C-63C8210845F0}</Project>
+      <Name>AuthenticationWebWcf.IService</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

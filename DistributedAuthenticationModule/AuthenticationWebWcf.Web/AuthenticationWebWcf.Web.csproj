@@ -37,15 +37,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Jenkins|AnyCPU'">
-    <DebugSymbols>true</DebugSymbols>
-    <OutputPath>bin\Jenkins\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <DebugType>full</DebugType>
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <ErrorReport>prompt</ErrorReport>
-    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Ninject">
       <HintPath>..\packages\Ninject.3.2.0.0\lib\net45-full\Ninject.dll</HintPath>
@@ -70,6 +61,7 @@
     <Compile Include="Business\IAuthenticatedUserManager.cs" />
     <Compile Include="Business\IAuthenticatedUserReader.cs" />
     <Compile Include="Business\IJsonWebTokenKeyConfig.cs" />
+    <Compile Include="Helpers\HttpContextUserAuthentication.cs" />
     <Compile Include="Mvc\ControllerAuthenticationReader.cs" />
     <Compile Include="Mvc\IControllerAuthenticationReader.cs" />
     <Compile Include="WebAuthFactory.cs" />
@@ -93,10 +85,6 @@
     <ProjectReference Include="..\AuthenticationWebWcf.Common\AuthenticationWebWcf.Common.csproj">
       <Project>{3AB7006A-CF2B-4CFA-A714-418507E92400}</Project>
       <Name>AuthenticationWebWcf.Common</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\AuthenticationWebWcf.Service\AuthenticationWebWcf.Service.csproj">
-      <Project>{0BD0114C-6FA6-43A2-A280-D6C4360A9D6F}</Project>
-      <Name>AuthenticationWebWcf.Service</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />

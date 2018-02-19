@@ -1,5 +1,6 @@
 ﻿using System.ServiceModel;
 using System.ServiceModel.Channels;
+using AuthenticationWebWcf.IService.Inspectors;
 using AuthenticationWebWcf.Service.ContextExtensions;
 using AuthenticationWebWcf.Service.Helpers;
 

@@ -1,6 +1,6 @@
 ﻿using System.ServiceModel.Dispatcher;
 
-namespace AuthenticationWebWcf.Service.Inspectors
+namespace AuthenticationWebWcf.IService.Inspectors
 {
     public interface ITokenClientMessageInspector : IClientMessageInspector
     {

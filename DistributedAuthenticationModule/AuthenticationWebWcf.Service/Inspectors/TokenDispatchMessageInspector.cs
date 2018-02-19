@@ -3,6 +3,7 @@ using System.ServiceModel;
 using System.ServiceModel.Channels;
 using System.ServiceModel.Description;
 using AuthenticationWebWcf.Common.DataContracts;
+using AuthenticationWebWcf.IService.Inspectors;
 using AuthenticationWebWcf.Service.Behaviors;
 using AuthenticationWebWcf.Service.Biz;
 using AuthenticationWebWcf.Service.ContextExtensions;

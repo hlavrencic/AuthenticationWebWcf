@@ -1,6 +1,7 @@
 ﻿using System.ServiceModel;
 using System.ServiceModel.Channels;
 using AuthenticationWebWcf.Common.Interfaces;
+using AuthenticationWebWcf.IService.Inspectors;
 using AuthenticationWebWcf.Service.Helpers;
 
 namespace AuthenticationWebWcf.Service.Inspectors

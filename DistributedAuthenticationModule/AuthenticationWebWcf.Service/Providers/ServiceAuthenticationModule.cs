@@ -1,5 +1,6 @@
 ﻿using AuthenticationWebWcf.Common;
 using AuthenticationWebWcf.Common.DataContracts;
+using AuthenticationWebWcf.IService.Inspectors;
 using AuthenticationWebWcf.Service.Inspectors;
 using Ninject.Modules;
 

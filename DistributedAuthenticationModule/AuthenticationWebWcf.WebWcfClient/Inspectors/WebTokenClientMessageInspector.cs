@@ -1,8 +1,10 @@
 ﻿using System.ServiceModel;
 using System.ServiceModel.Channels;
+using AuthenticationWebWcf.IService.Inspectors;
 using AuthenticationWebWcf.Service.Helpers;
+using AuthenticationWebWcf.Web.Helpers;
 
-namespace AuthenticationWebWcf.Service.Inspectors
+namespace AuthenticationWebWcf.WebWcfClient.Inspectors
 {
     public class WebTokenClientMessageInspector : ITokenClientMessageInspector
     {

@@ -1,6 +1,6 @@
 ﻿using System.Web;
 
-namespace AuthenticationWebWcf.Service.Helpers
+namespace AuthenticationWebWcf.Web.Helpers
 {
     public static class HttpContextUserAuthentication
     {

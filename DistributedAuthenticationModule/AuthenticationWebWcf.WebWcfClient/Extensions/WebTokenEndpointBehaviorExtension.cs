@@ -4,10 +4,10 @@ using System.ServiceModel.Configuration;
 using AuthenticationWebWcf.Common.Providers;
 using AuthenticationWebWcf.Service.Behaviors;
 using AuthenticationWebWcf.Service.Config;
-using AuthenticationWebWcf.Service.Inspectors;
 using AuthenticationWebWcf.Service.Providers;
+using AuthenticationWebWcf.WebWcfClient.Inspectors;
 
-namespace AuthenticationWebWcf.Service.Extensions
+namespace AuthenticationWebWcf.WebWcfClient.Extensions
 {
     public class WebTokenEndpointBehaviorExtension : BehaviorExtensionElement
     {

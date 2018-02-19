@@ -1,7 +1,7 @@
 ﻿using System.ServiceModel.Channels;
 using System.ServiceModel.Description;
 using System.ServiceModel.Dispatcher;
-using AuthenticationWebWcf.Service.Inspectors;
+using AuthenticationWebWcf.IService.Inspectors;
 
 namespace AuthenticationWebWcf.Service.Behaviors
 {
