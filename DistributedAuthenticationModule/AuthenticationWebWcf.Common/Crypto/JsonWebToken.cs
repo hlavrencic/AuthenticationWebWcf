@@ -12,42 +12,6 @@ namespace AuthenticationWebWcf.Common.Crypto
     /// </summary>
     public class JsonWebToken : IJsonWebToken
     {
-        private readonly Dictionary<JwtHashAlgorithm, Func<byte[], byte[], byte[]>> hashAlgorithms;
-
-        public JsonWebToken()
-        {
-            hashAlgorithms = new Dictionary<JwtHashAlgorithm, Func<byte[], byte[], byte[]>>
-            {
-                {
-                    JwtHashAlgorithm.Hs256, (key, value) =>
-                    {
-                        using (var sha = new HMACSHA256(key))
-                        {
-                            return sha.ComputeHash(value);
-                        }
-                    }
-                },
-                {
-                    JwtHashAlgorithm.Hs384, (key, value) =>
-                    {
-                        using (var sha = new HMACSHA384(key))
-                        {
-                            return sha.ComputeHash(value);
-                        }
-                    }
-                },
-                {
-                    JwtHashAlgorithm.Hs512, (key, value) =>
-                    {
-                        using (var sha = new HMACSHA512(key))
-                        {
-                            return sha.ComputeHash(value);
-                        }
-                    }
-                }
-            };
-        }
-
         /// <summary>
         /// Creates a JWT given a payload, the signing key (as a string that will be decoded with UTF8), and the algorithm to use.
         /// </summary>
@@ -82,7 +46,7 @@ namespace AuthenticationWebWcf.Common.Crypto
 
             var bytesToSign = Encoding.UTF8.GetBytes(stringToSign);
 
-            byte[] signature = hashAlgorithms[algorithm](key, bytesToSign);
+            var signature = GetSignature(algorithm, key, bytesToSign);
             segments.Add(Base64UrlEncode(signature));
 
             return string.Join(".", segments.ToArray());
@@ -90,18 +54,19 @@ namespace AuthenticationWebWcf.Common.Crypto
 
         public string Decode(string token, string key)
         {
-            return Decode(token, Encoding.UTF8.GetBytes(key));
+            var keyBytes = key != null ? Encoding.UTF8.GetBytes(key) : null;
+            return Decode(token, keyBytes);
         }
 
         /// <summary>
         /// Given a JWT, decode it and return the JSON payload.
         /// </summary>
         /// <param name="token">The JWT.</param>
-        /// <param name="key">The key that was used to sign the JWT (string that will be decoded with UTF8).</param>
+        /// <param name="keyBytes">The key that was used to sign the JWT (string that will be decoded with UTF8).</param>
         /// <param name="verify">Whether to verify the signature (default is true).</param>
         /// <returns>A string containing the JSON payload.</returns>
         /// <exception cref="SignatureVerificationException">Thrown if the verify parameter was true and the signature was NOT valid or if the JWT was signed with an unsupported algorithm.</exception>
-        public string Decode(string token, byte[] key, bool verify = true)
+        public string Decode(string token, byte[] keyBytes, bool verify = true)
         {
             if (string.IsNullOrEmpty(token))
             {
@@ -135,10 +100,10 @@ namespace AuthenticationWebWcf.Common.Crypto
                 }
 
                 var bytesToSign = Encoding.UTF8.GetBytes(string.Concat(header, ".", payload));
-                var keyBytes = key;
                 var algorithm = (string)headerData["alg"];
 
-                var signature = hashAlgorithms[GetHashAlgorithm(algorithm)](keyBytes, bytesToSign);
+                var algorithmEnum = GetHashAlgorithm(algorithm);
+                var signature = GetSignature(algorithmEnum, keyBytes, bytesToSign);
                 decodedCrypto = Convert.ToBase64String(crypto);
                 decodedSignature = Convert.ToBase64String(signature);
             }
@@ -153,6 +118,36 @@ namespace AuthenticationWebWcf.Common.Crypto
             }
 
             return payloadJson;
+        }
+
+        private byte[] GetSignature(JwtHashAlgorithm algorithm, byte[] keyBytes, byte[] bytesToSign)
+        {
+            using (var hashAlgoritm = GetHashAlgoritm(algorithm, keyBytes))
+            {
+                return hashAlgoritm.ComputeHash(bytesToSign);
+            }
+        }
+
+        private HashAlgorithm GetHashAlgoritm(JwtHashAlgorithm algoritm, byte[] keyBytes)
+        {
+            try
+            {
+                switch (algoritm)
+                {
+                    case JwtHashAlgorithm.Hs256:
+                        return new HMACSHA256(keyBytes);
+                    case JwtHashAlgorithm.Hs384:
+                        return new HMACSHA384(keyBytes);
+                    case JwtHashAlgorithm.Hs512:
+                        return new HMACSHA512(keyBytes);
+                    default:
+                        throw new ArgumentOutOfRangeException(nameof(algoritm), algoritm, null);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new SignatureVerificationException(string.Format("Failed to instance HashAlgoritm with key {0}", keyBytes) , ex);
+            }
         }
 
         private static JwtHashAlgorithm GetHashAlgorithm(string algorithm)
@@ -193,7 +188,7 @@ namespace AuthenticationWebWcf.Common.Crypto
             output = output.Replace('_', '/'); // 63rd char of encoding
 
             // Pad with trailing '='s
-            switch (output.Length % 4)
+            switch (output.Length%4)
             {
                 case 0:
                     break; // No pad chars in this case
@@ -203,7 +198,8 @@ namespace AuthenticationWebWcf.Common.Crypto
                 case 3:
                     output += "=";
                     break; // One pad char
-                default: throw new Exception("Illegal base64url string!");
+                default:
+                    throw new Exception("Illegal base64url string!");
             }
 
             var converted = Convert.FromBase64String(output); // Standard base64 decoder
