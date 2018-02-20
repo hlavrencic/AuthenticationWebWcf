@@ -132,6 +132,11 @@ namespace AuthenticationWebWcf.Common.Crypto
         {
             try
             {
+                if (keyBytes == null)
+                {
+                    keyBytes = new byte[]{ 0 };
+                }
+
                 switch (algoritm)
                 {
                     case JwtHashAlgorithm.Hs256:

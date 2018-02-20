@@ -19,6 +19,8 @@ namespace AuthenticationWebWcf.Web.Mvc
             this.logger = logger;
         }
 
+        public string RedirectResult { get; set; }
+
         public void OnAuthentication(AuthenticationContext filterContext)
         {
             var actionFilters = filterContext.ActionDescriptor.GetCustomAttributes(false);
@@ -33,9 +35,18 @@ namespace AuthenticationWebWcf.Web.Mvc
             {
                 filterContext.Principal = principalManagerFromToken.GetPrincipal(filterContext.HttpContext.Request);
 
-                if (filterContext.Principal == null)
+                if (filterContext.Principal != null)
+                {
+                    return;
+                }
+
+                if (RedirectResult == null)
                 {
                     SetUnauthorizedResult(filterContext, "Debe autenticarse.");
+                }
+                else
+                {
+                    filterContext.Result = new RedirectResult(RedirectResult);
                 }
             }
             catch (ExpiredException ex)
